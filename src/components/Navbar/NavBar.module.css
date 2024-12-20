@@ -1,0 +1,90 @@
+@keyframes flickering {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    opacity: 1;
+  }
+  20%, 24%, 55% {
+    opacity: 0.3;
+  }
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.flickering {
+  animation: flickering 2s infinite;
+  text-shadow: 0 0 8px #ff00ff, 0 0 15px #ff00ff, 0 0 20px #ff007f;
+}
+
+.popIn {
+  animation: popIn 0.5s ease forwards;
+}
+
+.loginButton,
+.logoutButton {
+  padding: 6px 14px;
+  font-size: 1rem;
+  border: 2px solid #ff007f;
+  background-color: transparent;
+  color: #00ffff;
+  font-family: "Press Start 1P", cursive;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.loginButton:hover,
+.logoutButton:hover {
+  background-color: #ff007f;
+  color: #000;
+  box-shadow: 0 0 10px #ff007f, 0 0 20px #ff007f;
+}
+
+.mobileMenu {
+  animation: slideDown 0.5s ease-out forwards;
+}
+.neonEffect {
+  position: relative;
+  color: #00ffff; 
+  text-shadow: 0 0 5px #c866e3, 0 0 10px #de6fe6, 0 0 20px #e9c3f2;
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+.neonEffect:hover {
+  transform: scale(1.1);
+  text-shadow: 0 0 15px #00ffff, 0 0 30px #00ffff, 0 0 45px #00ffff;
+  animation: flicker 1.5s infinite alternate;
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 1;
+    text-shadow: 0 0 15px #00ffff, 0 0 30px #00ffff, 0 0 45px #00ffff;
+  }
+  50% {
+    opacity: 0.8;
+    text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 35px #00ffff;
+  }
+  100% {
+    opacity: 1;
+    text-shadow: 0 0 15px #00ffff, 0 0 30px #00ffff, 0 0 45px #00ffff;
+  }
+}
