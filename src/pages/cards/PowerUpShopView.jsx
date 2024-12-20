@@ -20,17 +20,10 @@ const PowerUpShopView = ({card, refreshUpdateState}) => {
 
     let handleAvalText = () => {
         if(available){
-            return(
-                <div>
-                    This card is available
-                </div>
+            return(<></>
             )
         } else {
-            return(
-                <div>
-                    This card is not available
-                </div>
-            )
+            return(<></>)
         }
     }
 

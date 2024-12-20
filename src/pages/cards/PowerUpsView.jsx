@@ -20,19 +20,13 @@ const PowerUpsViews = ({card, refreshUpdateState}) => {
 
     let handleAvalText = () => {
         if(available){
-            return(
-                <div>
-                    This card is available
-                </div>
+            return(<></>
             )
         } else {
-            return(
-                <div>
-                    This card is not available
-                </div>
-            )
+            return(<></>)
         }
     }
+
 
     let handleClick = () => {
         fetch(ENDPOINTS.CHANGE_CARD_STATUS, {
